@@ -74,6 +74,7 @@ Checkout.click();
 
 
 
+
 //driver.quit();
 	}
 	
