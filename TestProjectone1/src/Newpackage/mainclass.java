@@ -65,7 +65,6 @@ Checkout = driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/div[2]/a[2]"
 Checkout.click();
 
 
-//driver.close();
 
 
 //driver.quit();
