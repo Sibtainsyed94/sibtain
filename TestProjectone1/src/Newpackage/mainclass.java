@@ -28,14 +28,14 @@ WebElement loginButton;
 loginButton = driver.findElement(By.xpath("//*[@id=\"content\"]/div/div[2]/div/form/input"));
 loginButton.click();
 
-String actualpagetitle = driver.getTitle();
-String expectedTitle = "My Account";
-
-if (actualpagetitle.contentEquals(expectedTitle)){
-    System.out.println("Test Passed!");
-} else {
-    System.out.println("Test Failed");
-}
+//String actualpagetitle = driver.getTitle();
+//String expectedTitle = "My Account";
+//
+//if (actualpagetitle.contentEquals(expectedTitle)){
+//    System.out.println("Test Passed!");
+//} else {
+//    System.out.println("Test Failed");
+//}
 
 //driver.get("https://demo.opencart.com/index.php?route=product/product&product_id=47&search=HP+LP3065");
 
