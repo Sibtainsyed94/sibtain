@@ -72,7 +72,7 @@ Checkout = driver.findElement(By.xpath("//*[@id=\"cart\"]/ul/li[2]/div/p/a[2]/st
 Checkout.click();
 
 
-
+//
 
 
 //driver.quit();
