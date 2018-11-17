@@ -55,6 +55,16 @@ New.click();
 WebElement AddCart;
 AddCart = driver.findElement(By.xpath("//*[@id=\"button-cart\"]"));
 AddCart.click();
+
+WebElement ShoppingCart;
+ShoppingCart = driver.findElement(By.xpath("//*[@id=\"product-product\"]/div[1]/a[2]"));
+ShoppingCart.click();
+
+WebElement Checkout;
+Checkout = driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/div[2]/a[2]"));
+Checkout.click();
+
+
 //driver.close();
 
 
