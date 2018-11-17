@@ -4,6 +4,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 public class mainclass {
 
@@ -12,10 +13,16 @@ public class mainclass {
 System.out.println("Hello World");
 
 System.setProperty("webdriver.chrome.driver", "E:\\New folder\\chromedriver.exe");
-WebDriver driver = new ChromeDriver();
+ChromeOptions options = new ChromeOptions();
+options.addArguments("start-maximized");
+options.addArguments("disable-infobars");
+options.addArguments("--incognito");
+options.addArguments("--ignore-certificate-errors");
+options.addArguments("--disable-popup-blocking");
+WebDriver driver = new ChromeDriver(options);
 
 driver.get("https:demo.opencart.com/index.php?route=account/login");
-driver.manage().window().maximize();
+//driver.manage().window().maximize();
 
 WebElement username;
 username = driver.findElement(By.id("input-email"));
@@ -56,12 +63,12 @@ WebElement AddCart;
 AddCart = driver.findElement(By.xpath("//*[@id=\"button-cart\"]"));
 AddCart.click();
 
-WebElement ShoppingCart;
-ShoppingCart = driver.findElement(By.xpath("//*[@id=\"product-product\"]/div[1]/a[2]"));
-ShoppingCart.click();
+WebElement PopUp;
+PopUp = driver.findElement(By.xpath("//*[@id=\"cart\"]/button"));
+PopUp.click();
 
 WebElement Checkout;
-Checkout = driver.findElement(By.xpath("//*[@id=\"content\"]/div[3]/div[2]/a[2]"));
+Checkout = driver.findElement(By.xpath("//*[@id=\"cart\"]/ul/li[2]/div/p/a[2]/strong"));
 Checkout.click();
 
 
